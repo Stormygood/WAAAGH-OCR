@@ -1,7 +1,9 @@
-from PIL import Image
-import pytesseract
+from bs4 import BeautifulSoup
 
-pytesseract.pytesseract.tesseract_cmd = r'd:\\Tesseract\\tesseract.exe'
+with open('.\\test_images\\Datasheets_all.html', 'r', encoding='utf-8') as datasheets:
+    soup = BeautifulSoup(datasheets, 'html.parser');
 
-text = pytesseract.image_to_string(Image.open('.\\test_images\\trukk_stats.png'))
-print(text)
+datasheetsArr = [];
+
+# for anchor in 
+
